@@ -1,0 +1,80 @@
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("https://images.unsplash.com/photo-1548439935-5f5f0a4fb02e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+  background-size: cover;
+}
+
+.loginTitle {
+  font-size: 50px;
+  margin-top: 100px;
+  color: black;
+  font-weight: bolder;
+  font-family: "Lora", serif;
+}
+
+.loginForm {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.loginInput1 {
+  padding: 25px;
+  background: transparent;
+  border: 3px solid white;
+  margin-right: 12px;
+}
+.loginInput1:hover{
+  background-color: aliceblue;
+  border: 3px solid black;
+}
+.loginInput2 {
+  padding: 25px;
+  background: transparent;
+  border: 3px solid white;
+}
+.loginInput2:hover{
+  background-color: aliceblue;
+  border: 3px solid black;
+}
+
+::placeholder{
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.loginButton {
+  margin-top: 18px;
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: rgb(253, 101, 101);
+  border: none;
+  font-size: large;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  height: fit-content;
+}
+
+.loginButton:disabled{
+  cursor: not-allowed;
+  background-color: rgb(252, 173, 173);
+}
+
+.loginRegisterButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: teal;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
