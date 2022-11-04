@@ -16,12 +16,12 @@
   justify-content: center;
 }
 
-.topIcon {
+/* .topIcon {
   font-size: 20px;
   margin-right: 10px;
   color: #444;
   cursor: pointer;
-}
+} */
 
 .topCenter {
   flex: 6;
@@ -39,8 +39,8 @@
 
 .topListItem {
   margin-right: 20px;
-  font-size: 28px;
-  font-weight: 300;
+  font-size: 40px;
+  font-weight: 400;
   cursor: pointer;
   color: black;
 }
@@ -52,14 +52,14 @@ a{
   color: black;
   text-decoration: none;
 }
-.topImg {
+/* .topImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 15px;
   cursor: pointer;
-}
+} */
 
 .topSearchIcon {
   font-size: 35px;

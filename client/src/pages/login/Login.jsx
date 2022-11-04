@@ -18,30 +18,37 @@ export default function Login() {
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
-      alert("Invalid Credentials..!!")
+      alert("Invalid Credentials..!!");
     }
   };
 
   return (
     <div className="login">
-      <span className="loginTitle">Login</span>
-      <form className="loginForm" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="loginInput1"
-          placeholder="Enter username..."
-          ref={userRef}
-        />
-        <input
-          type="password"
-          className="loginInput2"
-          placeholder="Enter password..."
-          ref={passwordRef}
-        />
-        <button className="loginButton" type="submit" disabled={isFetching}>
-          Login
-        </button>
-      </form>
+      <div className="headerTitles">
+        <span className="headerTitleLg">Experio</span>
+        <span className="headerTitleSm">An Experience Sharing Platform</span>
+        <div className="login-glass">
+          <span className="loginTitle">Login</span>
+          <form className="loginForm" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              className="loginInput1"
+              placeholder="Enter Username"
+              ref={userRef}
+            />
+            <input
+              type="password"
+              className="loginInput2"
+              placeholder="Enter Password"
+              ref={passwordRef}
+            />
+            
+          </form>
+          <button className="loginButton" type="submit" disabled={isFetching}>
+              Login
+            </button>
+        </div>
+      </div>
     </div>
   );
 }
