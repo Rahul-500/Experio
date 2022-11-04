@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Lora", serif;
+    font-family: 'Water Brush', cursive;
     color: #444;
   }
   
@@ -19,8 +19,8 @@
   
   .headerTitleLg {
     position: absolute;
-    top: 18%;
-    font-size: 150px;
+    top: 15%;
+    font-size: 180px;
     font-family: 'Water Brush', cursive;
     color: beige;
   }

@@ -24,30 +24,37 @@ export default function Register() {
   };
   return (
     <div className="register">
+      <div className="headerTitles">
+        <span className="headerTitleLg">Experio</span>
+        <span className="headerTitleSm">An Experience Sharing Platform</span>
+      <div className="register-glass">
       <span className="registerTitle">Register</span>
       <form className="registerForm" onSubmit={handleSubmit}>
         <input
           type="text"
           className="registerInput1"
-          placeholder="Enter username..."
+          placeholder="Enter Username"
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="text"
           className="registerInput2"
-          placeholder="Enter email..."
+          placeholder="Enter Email"
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           className="registerInput3"
-          placeholder="Enter password..."
+          placeholder="Enter Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="registerButton" type="submit">
+        
+      </form>
+      <button className="registerButton" type="submit">
           Register
         </button>
-      </form>
+      </div>
+      </div>
     </div>
   );
 }
