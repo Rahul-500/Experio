@@ -10,9 +10,11 @@ const path = require("path");
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
+const CONNECTION_URL = 'mongodb+srv://experio:experio123@cluster0.6faqngo.mongodb.net/?retryWrites=true&w=majority'
+const PORT = process.env.PORT|| 5000;
 
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(CONNECTION_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -37,7 +39,10 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
+app.get('/', (req, res) => {
+  res.send('Experio Project');
+});
 
-app.listen("5000", () => {
+app.listen(PORT, () => {
   console.log("Backend is running.");
 });
