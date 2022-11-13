@@ -20,8 +20,8 @@ mongoose
     useCreateIndex: true,
     useFindAndModify:true
   })
-  .then(console.log("Connected to MongoDB"))
-  .catch((err) => console.log(err));
+  .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
+  .catch((error) => console.log(`${error} did not connect`));
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -41,8 +41,4 @@ app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 app.get('/', (req, res) => {
   res.send('Experio Project');
-});
-
-app.listen(PORT, () => {
-  console.log("Backend is running.");
 });
